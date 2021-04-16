@@ -1,4 +1,5 @@
 import 'react-figma/rpc'
+import 'figma-plugin-ds/dist/figma-plugin-ds.css'
 
 document.getElementById('generateStyles').onclick = () => {
   const textarea = document.getElementById('jsonInput')

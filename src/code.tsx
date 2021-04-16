@@ -10,7 +10,7 @@ import deleteAllLocalStyles from './utils/deleteAllLocalStyles.js'
 figma.showUI(__html__)
 // setupMainThread()
 
-figma.ui.resize(256, 312)
+figma.ui.resize(256, 282)
 
 figma.root.setRelaunchData({ open: '' })
 
