@@ -2,10 +2,26 @@
   "name": "Import-Styles-from-JSON",
   "version": "1.0.0",
   "description": "Your Figma plugin",
-  "main": "code.js",
+  "main": "./src/code.tsx",
   "scripts": {
-    "build": "tsc -p tsconfig.json"
+    "webpack:watch": "webpack --watch"
   },
-  "author": "",
-  "license": ""
+  "author": "Gavin Baradic",
+  "license": "",
+  "dependencies": {
+    "@figma/plugin-typings": "^1.16.1",
+    "figma-plugin-ds": "^0.1.8",
+    "react": "^16.9.0",
+    "react-figma": "latest",
+    "tinycolor2": "^1.4.2"
+  },
+  "devDependencies": {
+    "html-webpack-inline-source-plugin": "^0.0.10",
+    "html-webpack-plugin": "^3.2.0",
+    "react-figma-webpack-config": "latest",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  }
 }

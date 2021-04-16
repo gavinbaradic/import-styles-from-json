@@ -2,5 +2,6 @@
   "name": "Import Styles from JSON",
   "id": "964860114553918879",
   "api": "1.0.0",
-  "main": "code.js"
+  "main": "dist/code.js",
+  "ui": "dist/ui.html"
 }
