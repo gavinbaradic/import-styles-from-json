@@ -1,4 +1,4 @@
-// import { setupMainThread } from 'react-figma/rpc'
+import { setupMainThread } from 'react-figma/rpc'
 
 import createColorStyle from './utils/createColorStyle.js'
 import createTextStyle from './utils/createTextStyle.js'
@@ -8,7 +8,7 @@ import deleteAllLocalStyles from './utils/deleteAllLocalStyles.js'
 
 // This shows the HTML page in "ui.html".
 figma.showUI(__html__)
-// setupMainThread()
+setupMainThread()
 
 figma.ui.resize(256, 282)
 
@@ -22,7 +22,7 @@ const generateStyles = (styles) => {
 }
 
 figma.ui.onmessage = async (msg) => {
-  if (msg.type === 'generateFromJson') {
+  if (msg.type === 'generateStyles') {
     const styles = JSON.parse(msg.styleObject)
 
     return generateStyles(styles)

@@ -2,13 +2,15 @@ import 'react-figma/rpc'
 import 'figma-plugin-ds/dist/figma-plugin-ds.css'
 
 document.getElementById('generateStyles').onclick = () => {
-  const textarea = document.getElementById('jsonInput')
+  const textareaValue = (document.getElementById(
+    'jsonInput'
+  ) as HTMLTextAreaElement).value
 
   // Check if theme is empty before sending
-  if (textarea?.value !== '') {
+  if (textareaValue) {
     parent.postMessage(
       {
-        pluginMessage: { type: 'generateStyles', styleObject: textarea.value },
+        pluginMessage: { type: 'generateStyles', styleObject: textareaValue },
       },
       '*'
     )
