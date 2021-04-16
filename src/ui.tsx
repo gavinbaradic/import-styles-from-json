@@ -1,7 +1,17 @@
-import * as React from 'react'
-import { App } from './App'
-
 import 'react-figma/rpc'
-import { render } from 'react-figma'
 
-render(<App />)
+document.getElementById('generateStyles').onclick = () => {
+  const textarea = document.getElementById('jsonInput')
+
+  // Check if theme is empty before sending
+  if (textarea?.value !== '') {
+    parent.postMessage(
+      {
+        pluginMessage: { type: 'generateStyles', styleObject: textarea.value },
+      },
+      '*'
+    )
+  } else {
+    console.log('error')
+  }
+}
