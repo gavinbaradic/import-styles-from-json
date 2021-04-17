@@ -18,7 +18,7 @@ const generateStyles = (styles) => {
   styles.color.map((style) => createColorStyle(style))
   styles.text.map((style) => createTextStyle(style))
   styles.effect.map((style) => createEffectStyle(style))
-  // styles.grid.map((style) => createGridStyle(style))
+  styles.grid.map((style) => createGridStyle(style))
 }
 
 figma.ui.onmessage = async (msg) => {
