@@ -11,7 +11,8 @@ Programmatically generate Figma styles from JSON .
   "colors": [
     {
       "name": "Blue/100",
-      "hex": "#0000FF"
+      "hex": "#0000FF",
+      "opacity": 1
     }
   ],
   "text": [
@@ -47,15 +48,17 @@ Programmatically generate Figma styles from JSON .
       "radius": 6,
       "spread": -5
     }
-  ],
-  "grid": [] // Coming soon!
+  ]
+  // Coming soon!
+  // "grid": []
 }
 ```
 
 ### Documentation
 
-| Attribute     | Type              | Description                     |
-| ------------- | ----------------- | ------------------------------- |
-| `colors`      | Array             | Collection of color styles.     |
-| `colors.name` | String            | Name of Figma style.            |
-| `colors.hex`  | String (Hex code) | Hex code value for Figma style. |
+| Attribute        | Type              | Description                                    |
+| ---------------- | ----------------- | ---------------------------------------------- |
+| `colors`         | Array             | Collection of color styles.                    |
+| `colors.name`    | String            | Name of Figma style.                           |
+| `colors.hex`     | String            | Hex code value for Figma style.                |
+| `colors.opacity` | Number (Optional) | Opacity value for Figma style. Default is `1`. |
