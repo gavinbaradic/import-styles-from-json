@@ -11,6 +11,7 @@ Programmatically generate Figma styles from JSON .
   "color": [
     {
       "name": "Blue/100",
+      "description": "Primary blue used for marketing backgrounds.",
       "hex": "#0000FF",
       "opacity": 1
     }
@@ -18,6 +19,7 @@ Programmatically generate Figma styles from JSON .
   "text": [
     {
       "name": "Body/30",
+      "description": "Primary text style used for body copy.",
       "fontSize": 16,
       "textDecoration": "NONE",
       "fontName": {
@@ -40,6 +42,7 @@ Programmatically generate Figma styles from JSON .
   "effect": [
     {
       "name": "Depth/100",
+      "description": "Depth style used for low-elevation UI elements.",
       "color": "rgba(58, 99, 249, 0.08))",
       "offset": {
         "x": 0,
@@ -52,6 +55,7 @@ Programmatically generate Figma styles from JSON .
   "grid": [
     {
       "name": "Desktop",
+      "description": "Desktop grid used for screens 1280px and up.",
       "pattern": "COLUMNS",
       "alignment": "STRETCH",
       "gutterSize": 24,

@@ -1,6 +1,6 @@
 import Color from 'tinycolor2'
 
-const createColorStyle = ({ name, hex, opacity }) => {
+const createColorStyle = ({ name, description, hex, opacity }) => {
   const localStyle = figma
     .getLocalPaintStyles()
     .find(({ name: localName }) => localName === name)
@@ -23,6 +23,7 @@ const createColorStyle = ({ name, hex, opacity }) => {
   }
 
   figmaStyle.name = name
+  figmaStyle.description = description
   figmaStyle.paints = [paintStyle]
 }
 

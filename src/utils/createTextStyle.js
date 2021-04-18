@@ -1,5 +1,6 @@
 const createTextStyle = async ({
   name,
+  description,
   fontSize,
   textDecoration,
   fontName,
@@ -19,6 +20,7 @@ const createTextStyle = async ({
   figmaStyle.fontName = fontName
 
   figmaStyle.name = name
+  figmaStyle.description = description
   figmaStyle.fontSize = fontSize
   figmaStyle.textDecoration = textDecoration
   figmaStyle.letterSpacing = letterSpacing

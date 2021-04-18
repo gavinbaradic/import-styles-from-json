@@ -1,5 +1,6 @@
 const createGridStyle = ({
   name,
+  description,
   pattern,
   alignment,
   gutterSize,
@@ -24,6 +25,7 @@ const createGridStyle = ({
   )
 
   figmaStyle.name = name
+  figmaStyle.description = description
   figmaStyle.layoutGrids = [layoutGrid]
 }
 

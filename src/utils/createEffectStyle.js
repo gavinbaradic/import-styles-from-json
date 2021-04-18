@@ -1,6 +1,13 @@
 import Color from 'tinycolor2'
 
-const createEffectStyle = ({ name, color, offset, radius, spread }) => {
+const createEffectStyle = ({
+  name,
+  description,
+  color,
+  offset,
+  radius,
+  spread,
+}) => {
   const localStyle = figma
     .getLocalEffectStyles()
     .find(({ name: localName }) => localName === name)
@@ -28,6 +35,7 @@ const createEffectStyle = ({ name, color, offset, radius, spread }) => {
   }
 
   figmaStyle.name = name
+  figmaStyle.description = description
   figmaStyle.effects = [effectStyles]
 }
 
