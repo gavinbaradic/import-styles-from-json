@@ -66,9 +66,9 @@ Programmatically generate Figma styles from JSON .
 }
 ```
 
-### Documentation
+## Documentation
 
-#### Color
+### Color
 
 View Figma documentation on how [PaintStyles](https://www.figma.com/plugin-docs/api/PaintStyle/) are composed.
 
@@ -87,7 +87,7 @@ The hex color of the paint. This does not have a alpha property, use opacity ins
 **colors.opacity?:** `number`\
 The opacity of the paint. Must be a value between 0 and 1. Defaults to 1.
 
-#### Grids
+### Grids
 
 View Figma documentation on how [GridStyles](https://www.figma.com/plugin-docs/api/GridStyle/) are composed.
 
