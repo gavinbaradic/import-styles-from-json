@@ -66,6 +66,8 @@ Programmatically generate Figma styles from JSON .
 
 #### Color
 
+View Figma documentation on how [PaintStyles](https://www.figma.com/plugin-docs/api/PaintStyle/) are composed.
+
 **colors:** `array`\
 List of Paint to replace the fills, strokes, or backgrounds property with.
 
@@ -78,10 +80,12 @@ The description of the style, used as an annotation when styles are published to
 **colors.hex:** `string`\
 The hex color of the paint. This does not have a alpha property, use opacity instead.
 
-**colors.opacity:** `number`\
+**colors.opacity?:** `number`\
 The opacity of the paint. Must be a value between 0 and 1. Defaults to 1.
 
 #### Grids
+
+View Figma documentation on how [GridStyles](https://www.figma.com/plugin-docs/api/GridStyle/) are composed.
 
 **grid:** `array`\
 List of `LayoutGrid` to replace the layoutGrids property with.
@@ -104,5 +108,8 @@ The distance between the sections of the grid.
 **grid.count:** `number`\
 The number of sections. This can be set to the value `Infinity`, which corresponds to "Auto" in the UI.
 
-**grid.offset:** `number`\
-The size of a section. This is ignored when `alignment` == `STRETCH` since the size is set automatically.
+**grid.sectionSize:** `number`\
+The size of a section. This is ignored when alignment == `STRETCH` since the size is set automatically. When `pattern` == `GRID`, it is the size of individual grid cells.
+
+**grid.offset?:** `number`\
+The distance between the layout grid sections and the edges of the frame. This is ignored when `alignment` == `CENTER` since the size is set automatically.
