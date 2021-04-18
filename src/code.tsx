@@ -1,5 +1,3 @@
-import { setupMainThread } from 'react-figma/rpc'
-
 import createColorStyle from './utils/createColorStyle.js'
 import createTextStyle from './utils/createTextStyle.js'
 import createEffectStyle from './utils/createEffectStyle.js'
@@ -8,7 +6,6 @@ import deleteAllLocalStyles from './utils/deleteAllLocalStyles.js'
 
 // This shows the HTML page in "ui.html".
 figma.showUI(__html__)
-setupMainThread()
 
 figma.ui.resize(256, 282)
 
