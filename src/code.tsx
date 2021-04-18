@@ -12,10 +12,10 @@ figma.ui.resize(256, 282)
 figma.root.setRelaunchData({ open: '' })
 
 const generateStyles = (styles) => {
-  styles.color.map((style) => createColorStyle(style))
-  styles.text.map((style) => createTextStyle(style))
-  styles.effect.map((style) => createEffectStyle(style))
-  styles.grid.map((style) => createGridStyle(style))
+  styles.colorStyles.map((style) => createColorStyle(style))
+  styles.textStyles.map((style) => createTextStyle(style))
+  styles.effectStyles.map((style) => createEffectStyle(style))
+  styles.gridStyles.map((style) => createGridStyle(style))
 }
 
 figma.ui.onmessage = async (msg) => {

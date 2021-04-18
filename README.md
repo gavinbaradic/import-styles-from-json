@@ -1,6 +1,6 @@
 # Import Styles from JSON
 
-Programmatically generate Figma styles from JSON .
+Programmatically generate Figma styles from JSON.
 
 ## JSON Format
 
@@ -8,7 +8,7 @@ Programmatically generate Figma styles from JSON .
 
 ```json
 {
-  "color": [
+  "colorStyles": [
     {
       "name": "Blue/100",
       "description": "Primary blue used for marketing backgrounds.",
@@ -16,7 +16,7 @@ Programmatically generate Figma styles from JSON .
       "opacity": 1
     }
   ],
-  "text": [
+  "textStyles": [
     {
       "name": "Body/30",
       "description": "Primary text style used for body copy.",
@@ -39,7 +39,7 @@ Programmatically generate Figma styles from JSON .
       "textCase": "ORIGINAL"
     }
   ],
-  "effect": [
+  "effectStyles": [
     {
       "name": "Depth/100",
       "description": "Depth style used for low-elevation UI elements.",
@@ -52,7 +52,7 @@ Programmatically generate Figma styles from JSON .
       "spread": -5
     }
   ],
-  "grid": [
+  "gridStyles": [
     {
       "name": "Desktop",
       "description": "Desktop grid used for screens 1280px and up.",
@@ -68,11 +68,11 @@ Programmatically generate Figma styles from JSON .
 
 ## Documentation
 
-### Color
+### Color Styles
 
 View Figma documentation on how [PaintStyles](https://www.figma.com/plugin-docs/api/PaintStyle/) are composed.
 
-**colors:** `array`\
+**colorStyles:** `array`\
 List of Paint to replace the fills, strokes, or backgrounds property with.
 
 **colors.name:** `string`\
@@ -87,11 +87,11 @@ The hex color of the paint. This does not have a alpha property, use opacity ins
 **colors.opacity?:** `number`\
 The opacity of the paint. Must be a value between 0 and 1. Defaults to 1.
 
-### Grids
+### Grid Styles
 
 View Figma documentation on how [GridStyles](https://www.figma.com/plugin-docs/api/GridStyle/) are composed.
 
-**grid:** `array`\
+**gridStyles:** `array`\
 List of `LayoutGrid` to replace the layoutGrids property with.
 
 **grid.name:** `string`\
