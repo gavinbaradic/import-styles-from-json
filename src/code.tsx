@@ -24,4 +24,8 @@ figma.ui.onmessage = async (msg) => {
 
     return generateStyles(styles)
   }
+
+  if (msg.type === 'deleteAllLocalStyles') {
+    return deleteAllLocalStyles()
+  }
 }
