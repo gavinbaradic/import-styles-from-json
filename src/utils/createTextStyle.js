@@ -20,7 +20,7 @@ const createTextStyle = async ({
   figmaStyle.fontName = fontName
 
   figmaStyle.name = name
-  figmaStyle.description = description
+  description && (figmaStyle.description = description)
   figmaStyle.fontSize = fontSize
   figmaStyle.textDecoration = textDecoration
   figmaStyle.letterSpacing = letterSpacing

@@ -35,7 +35,7 @@ const createEffectStyle = ({
   }
 
   figmaStyle.name = name
-  figmaStyle.description = description
+  description && (figmaStyle.description = description)
   figmaStyle.effects = [effectStyles]
 }
 

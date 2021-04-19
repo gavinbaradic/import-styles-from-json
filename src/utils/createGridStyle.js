@@ -25,7 +25,7 @@ const createGridStyle = ({
   )
 
   figmaStyle.name = name
-  figmaStyle.description = description
+  description && (figmaStyle.description = description)
   figmaStyle.layoutGrids = [layoutGrid]
 }
 

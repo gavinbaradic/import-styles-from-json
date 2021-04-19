@@ -78,7 +78,7 @@ List of Paint to replace the fills, strokes, or backgrounds property with.
 **colors.name:** `string`\
 The name of the style.
 
-**colors.description:** `string`\
+**colors.description?:** `string`\
 The description of the style, used as an annotation when styles are published to the team library.
 
 **colors.hex:** `string`\
@@ -97,7 +97,7 @@ List of `LayoutGrid` to replace the layoutGrids property with.
 **grid.name:** `string`\
 The name of the style.
 
-**grid.description:** `string`\
+**grid.description?:** `string`\
 The description of the style, used as an annotation when styles are published to the team library.
 
 **grid.pattern:** `ROWS` | `COLUMNS` | `GRID`\

@@ -23,7 +23,7 @@ const createColorStyle = ({ name, description, hex, opacity }) => {
   }
 
   figmaStyle.name = name
-  figmaStyle.description = description
+  description && (figmaStyle.description = description)
   figmaStyle.paints = [paintStyle]
 }
 
