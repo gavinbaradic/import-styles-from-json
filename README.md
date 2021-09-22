@@ -12,8 +12,7 @@ Programmatically generate Figma styles from JSON.
     {
       "name": "Blue/100",
       "description": "Primary blue used for marketing backgrounds.",
-      "hex": "#0000FF",
-      "opacity": 1
+      "color": "#0000FF"
     }
   ],
   "textStyles": [
@@ -81,11 +80,8 @@ The name of the style.
 **colors.description?:** `string`\
 The description of the style, used as an annotation when styles are published to the team library.
 
-**colors.hex:** `string`\
-The hex color of the paint. This does not have a alpha property, use opacity instead.
-
-**colors.opacity?:** `number`\
-The opacity of the paint. Must be a value between 0 and 1. Defaults to 1.
+**colors.color:** `string`\
+The color value of the paint. This may be a hex, rgb, or rgba value. To set opacity, you must use a format that supports alpha built in.
 
 ### Grid Styles
 

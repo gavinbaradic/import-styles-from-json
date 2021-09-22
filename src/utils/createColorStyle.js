@@ -1,14 +1,14 @@
 import Color from 'tinycolor2'
 
-const createColorStyle = ({ name, description, hex, opacity }) => {
+const createColorStyle = ({ name, description, color: value }) => {
   const localStyle = figma
     .getLocalPaintStyles()
     .find(({ name: localName }) => localName === name)
 
   const figmaStyle = localStyle || figma.createPaintStyle()
 
-  const convertedColor = Color(hex).toRgb()
-  const { r, g, b, a } = convertedColor
+  const convertedColor = Color(value).toRgb()
+  const { r, g, b, a: opacity } = convertedColor
 
   const color = {
     r: r / 255,
