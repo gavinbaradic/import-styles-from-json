@@ -1,4 +1,5 @@
 const createTextStyle = async ({
+  id,
   name,
   description,
   fontSize,
@@ -10,9 +11,11 @@ const createTextStyle = async ({
   paragraphSpacing,
   textCase,
 }) => {
-  const localStyle = figma
-    .getLocalTextStyles()
-    .find(({ name: localName }) => localName === name)
+  const localStyle = id
+    ? figma.getLocalTextStyles().find(({ id: localId }) => localId === id)
+    : figma
+        .getLocalTextStyles()
+        .find(({ name: localName }) => localName === name)
 
   const figmaStyle = localStyle || figma.createTextStyle()
 

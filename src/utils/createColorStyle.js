@@ -1,9 +1,11 @@
 import Color from 'tinycolor2'
 
-const createColorStyle = ({ name, description, color: value }) => {
-  const localStyle = figma
-    .getLocalPaintStyles()
-    .find(({ name: localName }) => localName === name)
+const createColorStyle = ({ id, name, description, value }) => {
+  const localStyle = id
+    ? figma.getLocalPaintStyles().find(({ id: localId }) => localId === id)
+    : figma
+        .getLocalPaintStyles()
+        .find(({ name: localName }) => localName === name)
 
   const figmaStyle = localStyle || figma.createPaintStyle()
 

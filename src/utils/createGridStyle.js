@@ -1,4 +1,5 @@
 const createGridStyle = ({
+  id,
   name,
   description,
   pattern,
@@ -8,9 +9,11 @@ const createGridStyle = ({
   sectionSize,
   offset,
 }) => {
-  const localStyle = figma
-    .getLocalGridStyles()
-    .find(({ name: localName }) => localName === name)
+  const localStyle = id
+    ? figma.getLocalGridStyles().find(({ id: localId }) => localId === id)
+    : figma
+        .getLocalGridStyles()
+        .find(({ name: localName }) => localName === name)
 
   const figmaStyle = localStyle || figma.createGridStyle()
 
