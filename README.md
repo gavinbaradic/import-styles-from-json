@@ -2,6 +2,13 @@
 
 Programmatically generate Figma styles from JSON.
 
+## Installation
+
+- In the terminal, run `npm i && npm run webpack:watch`
+- Open Figma and select **Plugins** and click **Manage Plugins...**, which opens a modal
+- Click the **New** button in the modal that opens and select **Import plugin from manifest....**
+- Locate the `manifest.json` file in your local copy of this repo
+
 ## JSON Format
 
 ### Example
